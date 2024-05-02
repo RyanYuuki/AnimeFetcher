@@ -37,11 +37,11 @@ function searchAnime(searchType)
         .then((response) => response.json())
         .then(quote => quoteElmt.textContent = `${quote.quote}`)
     }
-    else if (fetchType == 1) {
+    else if (searchType == 1) {
         fetch(`https://animechan.xyz/api/random/anime?title=${searchBarElmt.value}`)
         .then(response => response.json())
         .then(quote => quoteElmt.textContent = `${quote.quote}`)
-    } else {
+    } else if (searchType == 2) {
         fetch(`https://animechan.xyz/api/random/character?name=${searchBarElmt.value}`)
         .then((response) => response.json())
         .then((quote) => quoteElmt.textContent = `${quote.quote}`)        
