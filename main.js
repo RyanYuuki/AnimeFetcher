@@ -42,7 +42,7 @@ function searchAnime(searchType)
         .then(response => response.json())
         .then(quote => quoteElmt.textContent = `${quote.quote}`)
     } else {
-        fetch("https://animechan.xyz/api/random/character?name=saitama")
+        fetch(`https://animechan.xyz/api/random/character?name=${searchBarElmt.value}`)
         .then((response) => response.json())
         .then((quote) => quoteElmt.textContent = `${quote.quote}`)        
     }   
