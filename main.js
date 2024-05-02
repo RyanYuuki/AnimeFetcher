@@ -1,5 +1,3 @@
-const searchBarElmt = document.getElementsByClassName("searchBar")[0];
-const quoteElmt = document.getElementsByClassName("Quote")[0];
 const fetchTypeElmt = document.getElementsByClassName("searchType")[0];
 let searchType;
 function fetchType(Type)
@@ -31,6 +29,8 @@ function fetchType(Type)
 }
 function searchAnime(searchType)
 {
+    const searchBarElmt = document.getElementsByClassName("searchBar")[0];
+    const quoteElmt = document.getElementsByClassName("Quote")[0];
     if(searchType == 0)
     {
         fetch("https://animechan.xyz/api/random")
